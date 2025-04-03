@@ -22,7 +22,12 @@ void main(List<String> args)  async {
       measurementId: 'G-9E75CR1WVK',
     ),
   );
-  runApp(const MyApp());
+ runApp(
+    ChangeNotifierProvider(
+      create: (context) => UserProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -37,16 +42,16 @@ class MyApp extends StatelessWidget {
        debugShowCheckedModeBanner: false,
        initialRoute: "/classes",
        routes: {
-        // '/splash':(context)=>SplashScreen(),
-        // '/scrn1':(context)=>Screen1(),
-        // '/login':(context)=>LoginPage(),
-        // '/register':(context)=>RegisterPage(),
-        // '/scrn2':(context)=>Scrn2(),
-        // '/classes':(context)=>Bookclasses(),
+        '/splash':(context)=>SplashScreen(),
+        '/scrn1':(context)=>Screen1(),
+        '/login':(context)=>LoginPage(),
+        '/register':(context)=>RegisterPage(),
+        '/scrn2':(context)=>Scrn2(),
+        '/classes':(context)=>Bookclasses(),
         
         
        },
-      home:Bookclasses()
+      home:SplashScreen()
      )
     );
   }
