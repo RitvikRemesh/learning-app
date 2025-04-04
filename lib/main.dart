@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:learning/classes.dart';
+import 'package:learning/home.dart';
 import 'package:learning/login.dart';
 import 'package:learning/provider.dart';
 import 'package:learning/register.dart';
@@ -42,16 +43,16 @@ class MyApp extends StatelessWidget {
        debugShowCheckedModeBanner: false,
        initialRoute: "/classes",
        routes: {
-        '/splash':(context)=>SplashScreen(),
-        '/scrn1':(context)=>Screen1(),
-        '/login':(context)=>LoginPage(),
-        '/register':(context)=>RegisterPage(),
-        '/scrn2':(context)=>Scrn2(),
-        '/classes':(context)=>Bookclasses(),
+        // '/splash':(context)=>SplashScreen(),
+        // '/scrn1':(context)=>Screen1(),
+        // '/login':(context)=>LoginPage(),
+        // '/register':(context)=>RegisterPage(),
+        // '/scrn2':(context)=>Scrn2(),
+        // '/classes':(context)=>Bookclasses(),
         
         
        },
-      home:SplashScreen()
+      home:Home()
      )
     );
   }
